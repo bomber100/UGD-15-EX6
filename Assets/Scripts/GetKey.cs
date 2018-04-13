@@ -12,7 +12,7 @@ public class GetKey : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        print(PlayerController.havekey);
+        //print(PlayerController.havekey);
 	}
     private void OnTriggerEnter(Collider other)
     {
