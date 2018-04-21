@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class OpenDoor3 : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
+
+    // Update is called once per frame
+    void Update() {
+
+    }
+    private void OnTriggerEnter(Collider other) {
+        print("OpenDoor3: " + gameObject.name + " - " + other.name);
+
+        if (other.CompareTag("Player")) {
             PlayerController.touchdoor3 = true;
+            print("touch the door 3 ");
 
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
             PlayerController.touchdoor3 = false;
         }
     }

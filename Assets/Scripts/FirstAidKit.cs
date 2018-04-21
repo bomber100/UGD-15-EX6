@@ -17,8 +17,13 @@ public class FirstAidKit : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.health += 30;
-            gameObject.SetActive(false);
+            if (PlayerController.health <= 70)
+            {
+                PlayerController.health += 30;
+                gameObject.SetActive(false);
+            }
+            else PlayerController.health = 100;
+            
         }
     }
 }

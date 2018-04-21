@@ -13,4 +13,10 @@ public class Trap3 : MonoBehaviour {
 	void Update () {
 		
 	}
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            PlayerController.health -= 35;
+            gameObject.SetActive(false);
+        }
+    }
 }

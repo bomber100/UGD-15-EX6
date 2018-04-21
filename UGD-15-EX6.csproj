@@ -292,6 +292,7 @@
     <Compile Include="Assets\Scripts\GetKey.cs" />
     <Compile Include="Assets\Scripts\GetSecondKey.cs" />
     <Compile Include="Assets\Scripts\GetThirdKey.cs" />
+    <Compile Include="Assets\Scripts\HealthController.cs" />
     <Compile Include="Assets\Scripts\OpenDoor.cs" />
     <Compile Include="Assets\Scripts\OpenDoor1.cs" />
     <Compile Include="Assets\Scripts\OpenDoor2.cs" />
