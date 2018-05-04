@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour {
 
     void Start() {
         gameOverPanel.SetActive(false);
+       // SceneManager.LoadScene("start", LoadSceneMode.Single);
     }
     void Update() {
         if (PlayerController.health <= 0) {
@@ -18,6 +19,10 @@ public class UIController : MonoBehaviour {
     public void Button() {
         gameOverPanel.SetActive(false);
         PlayerController.health = 100;
+        SceneManager.LoadScene("Labyrinth", LoadSceneMode.Single);
+    }
+    public void begin() {
+        
         SceneManager.LoadScene("Labyrinth", LoadSceneMode.Single);
     }
 }

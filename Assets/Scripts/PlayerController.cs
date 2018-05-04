@@ -47,32 +47,33 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        print("PlayerController: " + gameObject.name + " - " + other.name);
-        print("door(" + PlayerController.touchdoor +
-               ", " + PlayerController.touchdoor1 +
-               ", " + PlayerController.touchdoor2 +
-               ", " + PlayerController.touchdoor3 + ") " +
-               "key(" + PlayerController.havekey +
-               ", " + PlayerController.havekey1 +
-               ", " + PlayerController.havekey2 +
-               ", " + PlayerController.havekey3 + ")"
-                );
+        //print("PlayerController: " + gameObject.name + " - " + other.name);
+        //print("door(" + PlayerController.touchdoor +
+        //       ", " + PlayerController.touchdoor1 +
+        //       ", " + PlayerController.touchdoor2 +
+        //       ", " + PlayerController.touchdoor3 + ") " +
+        //       "key(" + PlayerController.havekey +
+        //       ", " + PlayerController.havekey1 +
+        //       ", " + PlayerController.havekey2 +
+        //       ", " + PlayerController.havekey3 + ")"
+        //        );
 
         if ((PlayerController.havekey == true) && (PlayerController.touchdoor == true)) {
             other.gameObject.SetActive(false);
-            print("0");
+           // print("0");
         }
         else if ((PlayerController.havekey1 == true) && (PlayerController.touchdoor1 == true)) {
             other.gameObject.SetActive(false);
-            print("1");
+         //   print("1");
         }
         else if ((PlayerController.havekey2 == true) && (PlayerController.touchdoor2 == true)) {
-            print("2");
             other.gameObject.SetActive(false);
+         //   print("2");
+           
         }
         else if ((PlayerController.havekey3 == true) && (PlayerController.touchdoor3 == true)) {
             other.gameObject.SetActive(false);
-            print("3");
+         //   print("3");
         }
     }
 }
