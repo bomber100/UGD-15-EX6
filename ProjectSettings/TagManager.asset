@@ -9,6 +9,7 @@ TagManager:
   - key1
   - key2
   - Bot
+  - Wearpon
   layers:
   - Default
   - TransparentFX

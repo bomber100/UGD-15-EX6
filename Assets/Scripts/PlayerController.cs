@@ -15,11 +15,20 @@ public class PlayerController : MonoBehaviour {
     public float speed = 10.0f;
     public float gravity = -9.8f;
     public float jumpheight = 3.0f;
-
+    public GameObject[] wearpons;
     private CharacterController _charCont;
 
     void Start() {
         _charCont = GetComponent<CharacterController>();
+        
+        wearpons = GameObject.FindGameObjectsWithTag("Wearpon");
+        print(wearpons.Length + " wearpons");
+
+        foreach (GameObject wearpon in wearpons) {
+            wearpon.SetActive(false);
+          //  print(wearpon.name);
+        }
+        wearpons[1].SetActive(true);
     }
 
     void Update() {
@@ -40,6 +49,7 @@ public class PlayerController : MonoBehaviour {
                 jump = Vector3.ClampMagnitude(jump, jumpheight);
                 _charCont.Move(jump);
             }
+            Wearponswitch();
         }
         else {
             print("You died");
@@ -74,6 +84,36 @@ public class PlayerController : MonoBehaviour {
         else if ((PlayerController.havekey3 == true) && (PlayerController.touchdoor3 == true)) {
             other.gameObject.SetActive(false);
          //   print("3");
+        }
+    }
+
+    void Wearponswitch() {
+
+        if (Input.GetKeyDown(KeyCode.Q)) {        
+            wearpons[0].SetActive(true);
+            wearpons[1].SetActive(false);
+            wearpons[2].SetActive(false);
+            wearpons[3].SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            wearpons[0].SetActive(false);
+            wearpons[1].SetActive(true);
+            wearpons[2].SetActive(false);
+            wearpons[3].SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            wearpons[0].SetActive(false);
+            wearpons[1].SetActive(false);
+            wearpons[2].SetActive(true);
+            wearpons[3].SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.T)) {
+            wearpons[0].SetActive(false);
+            wearpons[1].SetActive(false);
+            wearpons[2].SetActive(false);
+            wearpons[3].SetActive(true);
         }
     }
 }
