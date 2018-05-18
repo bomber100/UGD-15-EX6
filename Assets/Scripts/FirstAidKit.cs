@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FirstAidKit : MonoBehaviour {
-
+    
     // Use this for initialization
     void Start () {
         
@@ -13,14 +13,12 @@ public class FirstAidKit : MonoBehaviour {
     void Update () {
         
     }
-    private void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
-            if (PlayerController.health <= 70){
-                PlayerController.health += 30;
+            if (PlayerController.health <= UpgradeController.maxHealth){
+                UpgradeController.regenPicked = true;
                 gameObject.SetActive(false);
             }
-            else PlayerController.health = 100;
-            
         }
     }
 }

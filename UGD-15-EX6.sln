@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UGD-15-EX6", "UGD-15-EX6.csproj", "{1D48AFA6-F6BD-323E-5CA8-5D92DF872A05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UGD-15-EX6.Editor", "UGD-15-EX6.Editor.csproj", "{9D332331-8D42-0E5D-7546-3A8C7AE18823}"
