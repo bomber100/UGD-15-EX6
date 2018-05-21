@@ -11,18 +11,25 @@ public class UIController : MonoBehaviour {
        // SceneManager.LoadScene("start", LoadSceneMode.Single);
     }
     void Update() {
-        if (PlayerController.health <= 0) {
+        if (PlayerController.health <= 0) {            
             gameOverPanel.SetActive(true);
-
         }
     }
     public void Button() {
+        gameOverPanel = GameObject.Find("GameOver");
+        print("button here " + gameOverPanel.name);
         gameOverPanel.SetActive(false);
         PlayerController.health = 100;
         SceneManager.LoadScene("Labyrinth", LoadSceneMode.Single);
     }
     public void begin() {
         
-        SceneManager.LoadScene("Labyrinth", LoadSceneMode.Single);
+        SceneManager.LoadScene("start", LoadSceneMode.Single);
+    }
+    public void TutorialButton() {
+        gameOverPanel = GameObject.Find("GameOver");
+        gameOverPanel.SetActive(false);
+        PlayerController.health = 100;
+        SceneManager.LoadScene("tutorial", LoadSceneMode.Single);
     }
 }
